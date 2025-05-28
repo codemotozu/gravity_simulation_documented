@@ -1,21 +1,33 @@
+/// c_cpp_properties.json
+/// 
+/// VS Code C/C++ IntelliSense configuration file for the gravity simulation project. // VS Code C/C++ IntelliSense-Konfigurationsdatei für das Gravitationssimulationsprojekt.
+/// Configures the C++ language server to properly analyze the code and provide intelligent code completion. // Konfiguriert den C++-Sprachserver, um den Code korrekt zu analysieren und intelligente Code-Vervollständigung bereitzustellen.
+/// 
+/// Usage:
+/// Place this file in the .vscode folder of your project root.
+/// VS Code will automatically use these settings for C/C++ IntelliSense.
+/// 
+/// EN: Defines compiler paths, include directories, and language standards for proper code analysis.
+/// DE: Definiert Compiler-Pfade, Include-Verzeichnisse und Sprachstandards für die korrekte Code-Analyse.
+
 {
-    "configurations": [
+    "configurations": [ // Array of configuration objects for different platforms or build configurations. // Array von Konfigurationsobjekten für verschiedene Plattformen oder Build-Konfigurationen.
         {
-            "name": "Win32",
-            "includePath": [
-                "${workspaceFolder}/**",
-                "C:/msys64/mingw64/include"
+            "name": "Win32", // Name of this configuration, displayed in VS Code's C/C++ configuration selector. // Name dieser Konfiguration, wird im C/C++-Konfigurationsauswähler von VS Code angezeigt.
+            "includePath": [ // Directories where the IntelliSense engine should look for header files. // Verzeichnisse, in denen die IntelliSense-Engine nach Header-Dateien suchen soll.
+                "${workspaceFolder}/**", // Includes all files and subdirectories in the workspace folder recursively. // Enthält alle Dateien und Unterverzeichnisse im Arbeitsbereichsordner rekursiv.
+                "C:/msys64/mingw64/include" // MSYS2 MinGW-w64 system include directory for standard libraries and OpenGL headers. // MSYS2 MinGW-w64 System-Include-Verzeichnis für Standardbibliotheken und OpenGL-Header.
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
+            "defines": [ // Preprocessor definitions that should be defined when parsing the code. // Präprozessor-Definitionen, die beim Parsen des Codes definiert werden sollen.
+                "_DEBUG", // Enables debug mode macros in the code. // Aktiviert Debug-Modus-Makros im Code.
+                "UNICODE", // Enables Unicode support in Windows API calls. // Aktiviert Unicode-Unterstützung in Windows-API-Aufrufen.
+                "_UNICODE" // Alternative Unicode definition used by some Windows headers. // Alternative Unicode-Definition, die von einigen Windows-Headern verwendet wird.
             ],
-            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
-            "cStandard": "c17",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "windows-gcc-x64"
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe", // Full path to the G++ compiler executable used for IntelliSense. // Vollständiger Pfad zur G++-Compiler-Executable, die für IntelliSense verwendet wird.
+            "cStandard": "c17", // C language standard to use for .c files (C17/C18 standard). // C-Sprachstandard für .c-Dateien (C17/C18-Standard).
+            "cppStandard": "c++17", // C++ language standard to use for .cpp files (C++17 standard). // C++-Sprachstandard für .cpp-Dateien (C++17-Standard).
+            "intelliSenseMode": "windows-gcc-x64" // IntelliSense mode that matches the compiler architecture and platform. // IntelliSense-Modus, der zur Compiler-Architektur und Plattform passt.
         }
     ],
-    "version": 4
-} 
+    "version": 4 // Configuration file format version, used by VS Code for compatibility. // Konfigurationsdatei-Formatversion, wird von VS Code für Kompatibilität verwendet.
+}
