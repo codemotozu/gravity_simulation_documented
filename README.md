@@ -15,7 +15,7 @@
 
 This is a **forked repository** featuring a 3D gravitational physics simulation built with OpenGL and C++. The project demonstrates real-time N-body gravitational interactions between celestial objects, complete with spacetime curvature visualization and interactive object creation.
 
-> **Note**: This is a fork of an existing project. All credit for the original implementation goes to the original author(s).
+> **Note**: This is a fork of [kavan010/gravity_sim](https://github.com/kavan010/gravity_sim). All credit for the original implementation goes to **@kavan010**.
 
 ### ✨ Features
 
@@ -157,7 +157,19 @@ Please refer to the original repository for licensing information.
 
 ### 🙏 Credits
 
-This project is a fork of an existing gravity simulation. All credit for the original implementation, architecture, and physics calculations goes to the original author(s).
+This project is a fork of **@kavan010**'s gravity simulation repository: [https://github.com/kavan010/gravity_sim](https://github.com/kavan010/gravity_sim)
+
+All credit for the original implementation, architecture, physics calculations, and core functionality goes to **@kavan010**. This fork includes enhanced documentation and VS Code development environment setup.
+
+### 🔄 Fork Enhancements
+
+This fork adds the following enhancements to the original project:
+- **Comprehensive documentation**: Bilingual (English/German) code comments throughout the codebase
+- **VS Code integration**: Complete development environment setup with IntelliSense, debugging, and build tasks
+- **Professional README**: Detailed installation guide, controls documentation, and project structure
+- **Development workflow**: Pre-configured build and debug settings for immediate development
+
+The core simulation, physics, and rendering remain unchanged from @kavan010's excellent original work.
 
 ---
 
@@ -167,7 +179,7 @@ This project is a fork of an existing gravity simulation. All credit for the ori
 
 Dies ist ein **geforktes Repository** mit einer 3D-Gravitationsphysik-Simulation, die mit OpenGL und C++ erstellt wurde. Das Projekt demonstriert Echtzeit-N-Körper-Gravitationswechselwirkungen zwischen Himmelsobjekten, komplett mit Raumzeit-Krümmungsvisualisierung und interaktiver Objekterstellung.
 
-> **Hinweis**: Dies ist ein Fork eines bestehenden Projekts. Alle Anerkennung für die ursprüngliche Implementierung gebührt dem/den ursprünglichen Autor(en).
+> **Hinweis**: Dies ist ein Fork von [kavan010/gravity_sim](https://github.com/kavan010/gravity_sim). Alle Anerkennung für die ursprüngliche Implementierung gebührt **@kavan010**.
 
 ### ✨ Funktionen
 
@@ -309,7 +321,19 @@ Bitte beziehen Sie sich auf das ursprüngliche Repository für Lizenzinformation
 
 ### 🙏 Danksagungen
 
-Dieses Projekt ist ein Fork einer bestehenden Gravitationssimulation. Alle Anerkennung für die ursprüngliche Implementierung, Architektur und Physikberechnungen gebührt dem/den ursprünglichen Autor(en).
+Dieses Projekt ist ein Fork von **@kavan010**'s Gravitationssimulations-Repository: [https://github.com/kavan010/gravity_sim](https://github.com/kavan010/gravity_sim)
+
+Alle Anerkennung für die ursprüngliche Implementierung, Architektur, Physikberechnungen und Kernfunktionalität gebührt **@kavan010**. Dieser Fork beinhaltet erweiterte Dokumentation und VS Code Entwicklungsumgebung-Setup.
+
+### 🔄 Fork-Verbesserungen
+
+Dieser Fork fügt folgende Verbesserungen zum ursprünglichen Projekt hinzu:
+- **Umfassende Dokumentation**: Zweisprachige (Englisch/Deutsch) Code-Kommentare im gesamten Code
+- **VS Code Integration**: Komplette Entwicklungsumgebung mit IntelliSense, Debugging und Build-Tasks
+- **Professionelle README**: Detaillierte Installationsanleitung, Steuerungsdokumentation und Projektstruktur
+- **Entwicklungsworkflow**: Vorkonfigurierte Build- und Debug-Einstellungen für sofortige Entwicklung
+
+Die Kernsimulation, Physik und Rendering bleiben unverändert von @kavan010's exzellenter ursprünglicher Arbeit.
 
 ---
 
