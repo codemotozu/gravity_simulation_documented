@@ -1,32 +1,44 @@
+/// launch.json
+/// 
+/// VS Code debug configuration file for the gravity simulation C++ project. // VS Code Debug-Konfigurationsdatei für das C++ Gravitationssimulationsprojekt.
+/// Configures the debugger settings to launch and debug the gravity_sim.exe executable using GDB. // Konfiguriert die Debugger-Einstellungen zum Starten und Debuggen der gravity_sim.exe mit GDB.
+/// 
+/// Usage:
+/// Place this file in the .vscode folder of your project root.
+/// Press F5 or use Debug > Start Debugging to launch the configured debug session.
+/// 
+/// EN: Sets up GDB debugging environment with comprehensive logging and pretty-printing for C++ development.
+/// DE: Richtet GDB-Debug-Umgebung mit umfassender Protokollierung und Pretty-Printing für C++-Entwicklung ein.
+
 {
-    "version": "0.2.0",
-    "configurations": [
+    "version": "0.2.0",                                    // Launch configuration format version used by VS Code. // Launch-Konfigurationsformat-Version, die von VS Code verwendet wird.
+    "configurations": [                                    // Array of debug configuration objects. // Array von Debug-Konfigurationsobjekten.
         {
-            "name": "g++ Debug",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/src/gravity_sim.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe",
-            "setupCommands": [
+            "name": "g++ Debug",                          // Display name for this debug configuration in VS Code's debug dropdown. // Anzeigename für diese Debug-Konfiguration in VS Codes Debug-Dropdown.
+            "type": "cppdbg",                             // Debugger type identifier for C/C++ debugging extension. // Debugger-Typ-Identifier für C/C++ Debug-Erweiterung.
+            "request": "launch",                          // Debug request type - "launch" starts a new process, "attach" connects to existing. // Debug-Request-Typ - "launch" startet neuen Prozess, "attach" verbindet mit existierendem.
+            "program": "${workspaceFolder}/src/gravity_sim.exe", // Full path to the executable to debug using workspace folder variable. // Vollständiger Pfad zur zu debuggenden Executable mit Workspace-Ordner-Variable.
+            "args": [],                                   // Command line arguments to pass to the program (empty array = no arguments). // Kommandozeilen-Argumente für das Programm (leeres Array = keine Argumente).
+            "stopAtEntry": false,                         // Whether to automatically stop at the program's entry point (main function). // Ob automatisch am Programmeinstiegspunkt (main-Funktion) gestoppt werden soll.
+            "cwd": "${workspaceFolder}",                  // Current working directory when the program runs, set to project root. // Aktuelles Arbeitsverzeichnis beim Programmstart, auf Projektroot gesetzt.
+            "environment": [],                            // Environment variables to set for the debugged program (empty = inherit from VS Code). // Umgebungsvariablen für das gedebuggte Programm (leer = von VS Code erben).
+            "externalConsole": false,                     // Whether to launch program in external console window (false = integrated terminal). // Ob Programm in externem Konsolenfenster gestartet werden soll (false = integriertes Terminal).
+            "MIMode": "gdb",                              // Machine Interface mode - specifies GDB as the underlying debugger. // Machine Interface-Modus - spezifiziert GDB als zugrundeliegenden Debugger.
+            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe", // Full path to the GDB executable in MSYS2 MinGW-w64 installation. // Vollständiger Pfad zur GDB-Executable in MSYS2 MinGW-w64-Installation.
+            "setupCommands": [                            // Array of GDB commands to execute during debugger initialization. // Array von GDB-Befehlen, die während Debugger-Initialisierung ausgeführt werden.
                 {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
+                    "description": "Enable pretty-printing for gdb", // Human-readable description of what this setup command does. // Menschenlesbare Beschreibung, was dieser Setup-Befehl macht.
+                    "text": "-enable-pretty-printing",   // GDB MI command to enable formatted display of complex data structures. // GDB MI-Befehl zum Aktivieren formatierter Anzeige komplexer Datenstrukturen.
+                    "ignoreFailures": true                // Continue debugging setup even if this command fails. // Debug-Setup fortsetzen, auch wenn dieser Befehl fehlschlägt.
                 }
             ],
-            "preLaunchTask": "build",
-            "logging": {
-                "moduleLoad": true,
-                "trace": true,
-                "engineLogging": true,
-                "programOutput": true,
-                "exceptions": true
+            "preLaunchTask": "build",                     // Name of the task to run before launching debugger (references tasks.json "build" task). // Name der Aufgabe, die vor Debugger-Start ausgeführt wird (referenziert tasks.json "build"-Aufgabe).
+            "logging": {                                  // Debug logging configuration object for troubleshooting and detailed output. // Debug-Logging-Konfigurationsobjekt für Problembehandlung und detaillierte Ausgabe.
+                "moduleLoad": true,                       // Log when dynamic libraries/modules are loaded during program execution. // Protokolliere, wenn dynamische Bibliotheken/Module während Programmausführung geladen werden.
+                "trace": true,                            // Enable detailed trace logging of debugger operations and communication. // Aktiviere detaillierte Trace-Protokollierung von Debugger-Operationen und -Kommunikation.
+                "engineLogging": true,                    // Log internal debug engine operations and state changes. // Protokolliere interne Debug-Engine-Operationen und Zustandsänderungen.
+                "programOutput": true,                    // Capture and display all output from the debugged program. // Erfasse und zeige alle Ausgaben des gedebugten Programms.
+                "exceptions": true                        // Log detailed information when exceptions occur during debugging. // Protokolliere detaillierte Informationen, wenn Exceptions während des Debuggings auftreten.
             }
         }
     ]
