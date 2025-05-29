@@ -1,63 +1,75 @@
+/// settings.json
+/// 
+/// VS Code workspace settings file for the gravity simulation C++ project. // VS Code Arbeitsbereich-Einstellungsdatei für das C++ Gravitationssimulationsprojekt.
+/// Configures file associations to ensure proper C++ syntax highlighting and IntelliSense for standard library headers. // Konfiguriert Dateizuordnungen für korrekte C++-Syntaxhervorhebung und IntelliSense für Standard-Bibliotheks-Header.
+/// 
+/// Usage:
+/// Place this file in the .vscode folder of your project root.
+/// VS Code will automatically apply these settings when opening the workspace.
+/// 
+/// EN: Maps headerless C++ standard library files and template implementation files to C++ language mode for proper IDE support.
+/// DE: Ordnet headerlose C++ Standard-Bibliotheks-Dateien und Template-Implementierungsdateien dem C++-Sprachmodus für ordnungsgemäße IDE-Unterstützung zu.
+
 {
-    "files.associations": {
-        "ostream": "cpp",
-        "array": "cpp",
-        "atomic": "cpp",
-        "bit": "cpp",
-        "*.tcc": "cpp",
-        "cctype": "cpp",
-        "charconv": "cpp",
-        "clocale": "cpp",
-        "cmath": "cpp",
-        "compare": "cpp",
-        "concepts": "cpp",
-        "cstdarg": "cpp",
-        "cstddef": "cpp",
-        "cstdint": "cpp",
-        "cstdio": "cpp",
-        "cstdlib": "cpp",
-        "ctime": "cpp",
-        "cwchar": "cpp",
-        "cwctype": "cpp",
-        "deque": "cpp",
-        "string": "cpp",
-        "unordered_map": "cpp",
-        "vector": "cpp",
-        "exception": "cpp",
-        "algorithm": "cpp",
-        "functional": "cpp",
-        "iterator": "cpp",
-        "memory": "cpp",
-        "memory_resource": "cpp",
-        "numeric": "cpp",
-        "optional": "cpp",
-        "random": "cpp",
-        "string_view": "cpp",
-        "system_error": "cpp",
-        "tuple": "cpp",
-        "type_traits": "cpp",
-        "utility": "cpp",
-        "format": "cpp",
-        "initializer_list": "cpp",
-        "iosfwd": "cpp",
-        "iostream": "cpp",
-        "istream": "cpp",
-        "limits": "cpp",
-        "new": "cpp",
-        "numbers": "cpp",
-        "span": "cpp",
-        "stdexcept": "cpp",
-        "streambuf": "cpp",
-        "text_encoding": "cpp",
-        "cinttypes": "cpp",
-        "typeinfo": "cpp",
-        "variant": "cpp",
-        "chrono": "cpp",
-        "ratio": "cpp",
-        "iomanip": "cpp",
-        "semaphore": "cpp",
-        "sstream": "cpp",
-        "stop_token": "cpp",
-        "thread": "cpp"
+    "files.associations": {                              // Object defining custom file extension to language mappings for VS Code. // Objekt, das benutzerdefinierte Dateierweiterungs-zu-Sprach-Zuordnungen für VS Code definiert.
+        "ostream": "cpp",                                // Standard output stream library for formatted output operations. // Standard-Ausgabestream-Bibliothek für formatierte Ausgabeoperationen.
+        "array": "cpp",                                  // Fixed-size sequence container from C++11 standard library. // Container mit fester Größe aus der C++11-Standardbibliothek.
+        "atomic": "cpp",                                 // Atomic operations library for thread-safe programming. // Atomare Operationsbibliothek für threadsichere Programmierung.
+        "bit": "cpp",                                    // Bit manipulation utilities introduced in C++20. // Bit-Manipulations-Utilities, eingeführt in C++20.
+        "*.tcc": "cpp",                                  // Template implementation files (Template C++ Code) used by GCC standard library. // Template-Implementierungsdateien (Template C++ Code), verwendet von GCC-Standardbibliothek.
+        "cctype": "cpp",                                 // Character classification functions (isalpha, isdigit, etc.). // Zeichen-Klassifizierungsfunktionen (isalpha, isdigit, etc.).
+        "charconv": "cpp",                               // High-performance string-to-number and number-to-string conversions (C++17). // Hochperformante String-zu-Zahl und Zahl-zu-String Konvertierungen (C++17).
+        "clocale": "cpp",                                // Localization library for locale-specific formatting and parsing. // Lokalisierungsbibliothek für locale-spezifische Formatierung und Parsing.
+        "cmath": "cpp",                                  // Mathematical functions (sin, cos, sqrt, etc.) from C math library. // Mathematische Funktionen (sin, cos, sqrt, etc.) aus der C-Mathe-Bibliothek.
+        "compare": "cpp",                                // Three-way comparison utilities introduced in C++20. // Drei-Wege-Vergleichs-Utilities, eingeführt in C++20.
+        "concepts": "cpp",                               // Compile-time constraints on template parameters (C++20). // Kompilierzeit-Beschränkungen für Template-Parameter (C++20).
+        "cstdarg": "cpp",                                // Variable argument list handling (va_list, va_start, va_end). // Behandlung variabler Argumentlisten (va_list, va_start, va_end).
+        "cstddef": "cpp",                                // Standard definitions (size_t, ptrdiff_t, nullptr_t). // Standarddefinitionen (size_t, ptrdiff_t, nullptr_t).
+        "cstdint": "cpp",                                // Fixed-width integer types (int32_t, uint64_t, etc.). // Integer-Typen mit fester Breite (int32_t, uint64_t, etc.).
+        "cstdio": "cpp",                                 // C standard input/output library (printf, scanf, FILE). // C-Standard-Ein-/Ausgabebibliothek (printf, scanf, FILE).
+        "cstdlib": "cpp",                                // General utilities (malloc, free, exit, system). // Allgemeine Utilities (malloc, free, exit, system).
+        "ctime": "cpp",                                  // Date and time utilities (time_t, struct tm, clock). // Datum- und Zeit-Utilities (time_t, struct tm, clock).
+        "cwchar": "cpp",                                 // Wide character support for internationalization. // Wide-Character-Unterstützung für Internationalisierung.
+        "cwctype": "cpp",                                // Wide character classification and conversion functions. // Wide-Character-Klassifizierungs- und Konvertierungsfunktionen.
+        "deque": "cpp",                                  // Double-ended queue container with efficient insertion/deletion at both ends. // Doppelt-endige Warteschlange mit effizienter Einfügung/Löschung an beiden Enden.
+        "string": "cpp",                                 // Dynamic string class with extensive manipulation capabilities. // Dynamische String-Klasse mit umfangreichen Manipulationsmöglichkeiten.
+        "unordered_map": "cpp",                          // Hash table-based associative container for key-value pairs. // Hash-Table-basierter assoziativer Container für Schlüssel-Wert-Paare.
+        "vector": "cpp",                                 // Dynamic array container with automatic memory management. // Dynamischer Array-Container mit automatischer Speicherverwaltung.
+        "exception": "cpp",                              // Exception handling base classes and utilities. // Exception-Handling-Basisklassen und -Utilities.
+        "algorithm": "cpp",                              // Collection of algorithms (sort, find, transform, etc.). // Sammlung von Algorithmen (sort, find, transform, etc.).
+        "functional": "cpp",                             // Function objects, lambdas, and functional programming utilities. // Funktionsobjekte, Lambdas und funktionale Programmier-Utilities.
+        "iterator": "cpp",                               // Iterator categories and utilities for container traversal. // Iterator-Kategorien und -Utilities für Container-Durchlauf.
+        "memory": "cpp",                                 // Smart pointers and memory management utilities. // Smart Pointer und Speicherverwaltungs-Utilities.
+        "memory_resource": "cpp",                        // Polymorphic memory resources for custom allocation strategies (C++17). // Polymorphe Speicherressourcen für benutzerdefinierte Allokationsstrategien (C++17).
+        "numeric": "cpp",                                // Numeric algorithms (accumulate, partial_sum, etc.). // Numerische Algorithmen (accumulate, partial_sum, etc.).
+        "optional": "cpp",                               // Type-safe optional values that may or may not contain a value (C++17). // Typsichere optionale Werte, die einen Wert enthalten können oder nicht (C++17).
+        "random": "cpp",                                 // Random number generation with various distributions. // Zufallszahlengenerierung mit verschiedenen Verteilungen.
+        "string_view": "cpp",                            // Non-owning read-only view of string data (C++17). // Nicht-besitzende, schreibgeschützte Ansicht von String-Daten (C++17).
+        "system_error": "cpp",                           // System error codes and error handling mechanisms. // System-Fehlercodes und Fehlerbehandlungsmechanismen.
+        "tuple": "cpp",                                  // Fixed-size collection of heterogeneous values. // Sammlung heterogener Werte mit fester Größe.
+        "type_traits": "cpp",                            // Compile-time type information and type manipulation utilities. // Kompilierzeit-Typinformationen und Typ-Manipulations-Utilities.
+        "utility": "cpp",                                // General utilities (pair, move, forward, swap). // Allgemeine Utilities (pair, move, forward, swap).
+        "format": "cpp",                                 // Type-safe string formatting library (C++20). // Typsichere String-Formatierungsbibliothek (C++20).
+        "initializer_list": "cpp",                       // Support for brace-enclosed initializer lists. // Unterstützung für geschweifte Initialisierungslisten.
+        "iosfwd": "cpp",                                 // Forward declarations for iostream classes to reduce compilation dependencies. // Vorwärtsdeklarationen für iostream-Klassen zur Reduzierung von Kompilierungsabhängigkeiten.
+        "iostream": "cpp",                               // Standard input/output stream objects (cin, cout, cerr). // Standard-Ein-/Ausgabe-Stream-Objekte (cin, cout, cerr).
+        "istream": "cpp",                                // Input stream classes for reading formatted and unformatted data. // Eingabe-Stream-Klassen zum Lesen formatierter und unformatierter Daten.
+        "limits": "cpp",                                 // Numeric limits and characteristics for fundamental types. // Numerische Grenzen und Eigenschaften für fundamentale Typen.
+        "new": "cpp",                                    // Dynamic memory allocation operators and handlers. // Dynamische Speicherallokations-Operatoren und -Handler.
+        "numbers": "cpp",                                // Mathematical constants (pi, e, etc.) introduced in C++20. // Mathematische Konstanten (pi, e, etc.), eingeführt in C++20.
+        "span": "cpp",                                   // Non-owning view of contiguous sequence of objects (C++20). // Nicht-besitzende Ansicht einer zusammenhängenden Sequenz von Objekten (C++20).
+        "stdexcept": "cpp",                              // Standard exception classes (runtime_error, logic_error, etc.). // Standard-Exception-Klassen (runtime_error, logic_error, etc.).
+        "streambuf": "cpp",                              // Stream buffer classes for customizing stream behavior. // Stream-Buffer-Klassen zur Anpassung des Stream-Verhaltens.
+        "text_encoding": "cpp",                          // Text encoding identification and conversion utilities (C++23). // Text-Encoding-Identifizierung und Konvertierungs-Utilities (C++23).
+        "cinttypes": "cpp",                              // Format macros for fixed-width integer types. // Format-Makros für Integer-Typen mit fester Breite.
+        "typeinfo": "cpp",                               // Runtime type information (typeid, type_info). // Laufzeit-Typinformationen (typeid, type_info).
+        "variant": "cpp",                                // Type-safe union that can hold one of several alternative types (C++17). // Typsichere Union, die einen von mehreren alternativen Typen enthalten kann (C++17).
+        "chrono": "cpp",                                 // Time utilities with duration, time points, and clocks. // Zeit-Utilities mit Dauer, Zeitpunkten und Uhren.
+        "ratio": "cpp",                                  // Compile-time rational arithmetic for template metaprogramming. // Kompilierzeit-Bruchrechnung für Template-Metaprogrammierung.
+        "iomanip": "cpp",                                // Input/output manipulators for formatting streams (setw, setprecision). // Ein-/Ausgabe-Manipulatoren zur Stream-Formatierung (setw, setprecision).
+        "semaphore": "cpp",                              // Synchronization primitive for controlling access to shared resources (C++20). // Synchronisationsprimitiv zur Kontrolle des Zugriffs auf geteilte Ressourcen (C++20).
+        "sstream": "cpp",                                // String streams for in-memory string processing. // String-Streams für In-Memory-String-Verarbeitung.
+        "stop_token": "cpp",                             // Cancellation mechanism for cooperative thread interruption (C++20). // Abbruchmechanismus für kooperative Thread-Unterbrechung (C++20).
+        "thread": "cpp"                                  // Threading support for concurrent execution and synchronization. // Threading-Unterstützung für gleichzeitige Ausführung und Synchronisation.
     }
 }
