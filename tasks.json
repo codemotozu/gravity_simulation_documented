@@ -1,35 +1,50 @@
+/// tasks.json
+/// 
+/// VS Code task configuration file for the gravity simulation C++ project. // VS Code Task-Konfigurationsdatei für das C++ Gravitationssimulationsprojekt.
+/// Defines build tasks to compile the gravity simulation from source code to executable using G++ compiler. // Definiert Build-Tasks zum Kompilieren der Gravitationssimulation vom Quellcode zur ausführbaren Datei mit G++ Compiler.
+/// 
+/// Usage:
+/// ```bash
+/// # Press Ctrl+Shift+P and run "Tasks: Run Task" then select "build"
+/// # Or press Ctrl+Shift+B for default build task
+/// # Or use Terminal > Run Build Task from menu
+/// ```
+/// 
+/// EN: Configures G++ compilation with OpenGL/GLFW libraries and sets up debugging symbols for the gravity simulation.
+/// DE: Konfiguriert G++ Kompilierung mit OpenGL/GLFW-Bibliotheken und richtet Debug-Symbole für die Gravitationssimulation ein.
+
 {
-    "version": "2.0.0",
-    "tasks": [
+    "version": "2.0.0",                                   // Task configuration format version used by VS Code. // Task-Konfigurationsformat-Version, die von VS Code verwendet wird.
+    "tasks": [                                            // Array of task definitions for various build and development operations. // Array von Task-Definitionen für verschiedene Build- und Entwicklungsoperationen.
         {
-            "label": "build",
-            "type": "cppbuild",
-            "command": "C:/msys64/mingw64/bin/g++.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${workspaceFolder}/src/gravity_sim.cpp",
-                "-o",
-                "${workspaceFolder}/src/gravity_sim.exe",
-                "-lglfw3",
-                "-lopengl32",
-                "-lgdi32",
-                "-I",
-                "C:/msys64/mingw64/include",
-                "-L",
-                "C:/msys64/mingw64/lib"
+            "label": "build",                             // Human-readable name for this task shown in VS Code's task list. // Menschenlesbarer Name für diesen Task, der in VS Codes Task-Liste angezeigt wird.
+            "type": "cppbuild",                           // Task type indicating C++ build configuration with IntelliSense integration. // Task-Typ, der C++ Build-Konfiguration mit IntelliSense-Integration anzeigt.
+            "command": "C:/msys64/mingw64/bin/g++.exe",   // Full path to the G++ compiler executable in MSYS2 MinGW-w64 installation. // Vollständiger Pfad zur G++ Compiler-Executable in MSYS2 MinGW-w64-Installation.
+            "args": [                                     // Array of command-line arguments passed to the G++ compiler. // Array von Kommandozeilen-Argumenten, die an den G++ Compiler übergeben werden.
+                "-fdiagnostics-color=always",             // Enable colored compiler output for better error/warning visibility in terminal. // Aktiviere farbige Compiler-Ausgabe für bessere Fehler-/Warnungs-Sichtbarkeit im Terminal.
+                "-g",                                     // Include debugging information in the compiled executable for GDB debugging. // Füge Debug-Informationen in die kompilierte Executable für GDB-Debugging ein.
+                "${workspaceFolder}/src/gravity_sim.cpp", // Source file path using VS Code workspace folder variable. // Quelldatei-Pfad mit VS Code Arbeitsbereich-Ordner-Variable.
+                "-o",                                     // Output flag specifying the next argument as the output executable name. // Ausgabe-Flag, das das nächste Argument als Namen der Ausgabe-Executable spezifiziert.
+                "${workspaceFolder}/src/gravity_sim.exe", // Output executable path where the compiled program will be saved. // Ausgabe-Executable-Pfad, wo das kompilierte Programm gespeichert wird.
+                "-lglfw3",                                // Link against GLFW3 library for window management and input handling. // Verknüpfe mit GLFW3-Bibliothek für Fensterverwaltung und Eingabebehandlung.
+                "-lopengl32",                             // Link against OpenGL32 library for 3D graphics rendering on Windows. // Verknüpfe mit OpenGL32-Bibliothek für 3D-Grafik-Rendering unter Windows.
+                "-lgdi32",                                // Link against GDI32 library for Windows Graphics Device Interface support. // Verknüpfe mit GDI32-Bibliothek für Windows Graphics Device Interface-Unterstützung.
+                "-I",                                     // Include directory flag for specifying additional header search paths. // Include-Verzeichnis-Flag zum Spezifizieren zusätzlicher Header-Suchpfade.
+                "C:/msys64/mingw64/include",              // Include path for MSYS2 MinGW-w64 system headers (OpenGL, GLFW, etc.). // Include-Pfad für MSYS2 MinGW-w64 System-Header (OpenGL, GLFW, etc.).
+                "-L",                                     // Library directory flag for specifying additional library search paths. // Bibliotheks-Verzeichnis-Flag zum Spezifizieren zusätzlicher Bibliotheks-Suchpfade.
+                "C:/msys64/mingw64/lib"                   // Library path for MSYS2 MinGW-w64 compiled libraries (GLFW3, OpenGL). // Bibliotheks-Pfad für MSYS2 MinGW-w64 kompilierte Bibliotheken (GLFW3, OpenGL).
             ],
-            "options": {
-                "cwd": "${workspaceFolder}"
+            "options": {                                  // Additional options object for configuring task execution environment. // Zusätzliches Options-Objekt zur Konfiguration der Task-Ausführungsumgebung.
+                "cwd": "${workspaceFolder}"               // Current working directory set to project root using workspace variable. // Aktuelles Arbeitsverzeichnis auf Projektroot mit Workspace-Variable gesetzt.
             },
-            "problemMatcher": [
-                "$gcc"
+            "problemMatcher": [                           // Array of problem matchers to parse compiler output and highlight errors in VS Code. // Array von Problem-Matchern zum Parsen der Compiler-Ausgabe und Hervorheben von Fehlern in VS Code.
+                "$gcc"                                    // Built-in GCC problem matcher that recognizes G++ compiler error/warning format. // Eingebauter GCC Problem-Matcher, der G++ Compiler Fehler-/Warnungs-Format erkennt.
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
+            "group": {                                    // Task group configuration defining how this task integrates with VS Code's build system. // Task-Gruppen-Konfiguration, die definiert, wie dieser Task in VS Codes Build-System integriert wird.
+                "kind": "build",                          // Categorizes this task as a build operation for VS Code's task management. // Kategorisiert diesen Task als Build-Operation für VS Codes Task-Management.
+                "isDefault": true                         // Sets this as the default build task accessible via Ctrl+Shift+B shortcut. // Setzt dies als Standard-Build-Task, der über Ctrl+Shift+B-Shortcut zugänglich ist.
             },
-            "detail": "compiler: C:/msys64/mingw64/bin/g++.exe"
+            "detail": "compiler: C:/msys64/mingw64/bin/g++.exe" // Additional description shown in task picker providing compiler information. // Zusätzliche Beschreibung im Task-Picker, die Compiler-Informationen bereitstellt.
         }
     ]
 }
